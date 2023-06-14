@@ -20,7 +20,6 @@ plugins=(
     git-flow
     systemd
     zoxide
-    zsh-alias-finder
     zsh-autosuggestions
     zsh-bat
     ubuntu
