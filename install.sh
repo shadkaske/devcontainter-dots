@@ -36,6 +36,10 @@ fi
 if [ ! -d "$HOME/.fzf" ]
 then
     git clone https://github.com/junegunn/fzf.git "$HOME/.fzf"
+fi
+
+if [ -d "$HOME/.fzf" ]
+then
     "$HOME/.fzf/install --bin"
 fi
 
