@@ -48,6 +48,4 @@ cargo install fd-find exa ripgrep bat zoxide
 
 cd "$HOME/dotfiles"
 
-rm -rf "$HOME/{.zshrc,.zshenv,.fzf.bash,.fzf.zsh}"
-
 stow shell &> /dev/null
