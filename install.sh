@@ -44,7 +44,7 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 source "$HOME/.cargo/env"
 
-cargo install fd-find exa ripgrep bat zoxide
+cargo install fd-find exa ripgrep bat
 
 cd "$HOME/dotfiles"
 
