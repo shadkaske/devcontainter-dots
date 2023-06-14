@@ -1,21 +1,5 @@
 #!/bin/bash
 
-# Install Rust Up
-curl https://sh.rustup.rs -sSf | sh -s -- -y
-
-# Add Cargo Env
-source "$HOME/.cargo/env"
-
-# Install Rusty Bits
-cargo install ripgrep exa fd-find bat
-
-# Install fzf
-if [ ! -d "$HOME/.fzf" ]
-then
-    git clone https://github.com/junegunn/fzf.git "$HOME/.fzf"
-    $HOME/.fzf/install --bin
-fi
-
 # Install Oh My Zsh
 if [ ! -d "$HOME/.local/share/oh-my-zsh" ];
 then
@@ -48,6 +32,13 @@ then
     git clone https://github.com/fdellwing/zsh-bat "$PLUGIN_DIR/zsh-bat"
 fi
 
+# Install fzf
+if [ ! -d "$HOME/.fzf" ]
+then
+    git clone https://github.com/junegunn/fzf.git "$HOME/.fzf"
+    $HOME/.fzf/install --bin
+fi
+
 # Install RustUp
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 
@@ -57,4 +48,6 @@ cargo install fd-find exa ripgrep bat zoxide
 
 cd "$HOME/dotfiles"
 
-stow shell
+rm -rf "$HOME/{.zshrc,.zshenv,.fzf.bash,.fzf.zsh}"
+
+stow shell &> /dev/null
