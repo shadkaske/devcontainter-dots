@@ -36,7 +36,7 @@ fi
 if [ ! -d "$HOME/.fzf" ]
 then
     git clone https://github.com/junegunn/fzf.git "$HOME/.fzf"
-    $HOME/.fzf/install --bin
+    "$HOME/.fzf/install --bin"
 fi
 
 # Install RustUp
