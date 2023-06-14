@@ -19,7 +19,6 @@ plugins=(
     git
     git-flow
     systemd
-    zoxide
     zsh-autosuggestions
     zsh-bat
     ubuntu
